@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BlogScaffold</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class='bg_green' >
+
+<%= link_to 'Español', users_path(lang: 'es') %>
+
+<%= link_to 'Inglés', users_path(lang: 'en') %>
+
+<%= yield %>
+
+</body>
+</html>

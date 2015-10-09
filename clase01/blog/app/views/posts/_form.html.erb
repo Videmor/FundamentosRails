@@ -1,0 +1,25 @@
+<%= form_for @post do |f| %>
+  <% if @post.errors.any? %>
+    <div class='errors'>
+    <h2>Tiene <%= pluralize(@post.errors.count, 'error') %> </h2>
+
+    <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end%>
+    </ul>
+  </div>
+  <% end %>
+  <%= f.label 'Titulo' %>
+  <%= f.text_field :title %>
+  <br/>
+  <br/>
+  <br/>
+  <%= f.label 'Texto' %>
+  <%= f.text_area :text %>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <%= f.submit %>
+<% end %>

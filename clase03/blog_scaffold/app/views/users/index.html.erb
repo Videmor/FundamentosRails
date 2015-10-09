@@ -1,0 +1,7 @@
+<h1><%= t(:users) %></h1>
+
+<ul>
+<% @users.each do |user| %>
+  <li><%= user.name %> - <%= user.user_type.try(:name) %></li>
+<% end %>
+</ul>
